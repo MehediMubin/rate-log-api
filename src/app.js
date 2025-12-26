@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { globalErrorHandler, notFoundHandler } from "express-error-toolkit";
+import actionRouter from './app/routes/api.js';
 
 const app = express();
 
@@ -8,6 +9,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// use action router
+app.use('/api', actionRouter);
 
 // home route
 app.get("/", (req, res) => {
