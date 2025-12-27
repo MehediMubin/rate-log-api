@@ -1,7 +1,9 @@
+import rateLimiter from "../services/rateLimiter.js";
+
 const rateLimitMiddleware = (req, res, next) => {
    const ip = req.ip;
 
-   const isAllowed = false;
+   const isAllowed = rateLimiter.checkLimit(ip);
 
    if (isAllowed) {
       next();
