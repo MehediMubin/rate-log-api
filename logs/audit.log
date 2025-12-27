@@ -1,0 +1,15 @@
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.017Z","status":"allowed"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.031Z","status":"allowed"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.042Z","status":"allowed"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.054Z","status":"allowed"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.064Z","status":"allowed"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.076Z","status":"allowed"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.087Z","status":"allowed"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.097Z","status":"allowed"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.112Z","status":"allowed"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.135Z","status":"allowed"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.156Z","status":"blocked"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.178Z","status":"blocked"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.208Z","status":"blocked"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.228Z","status":"blocked"}
+{"ip":"::1","endpoint":"/api/action","timestamps":"2025-12-27T10:57:29.243Z","status":"blocked"}
