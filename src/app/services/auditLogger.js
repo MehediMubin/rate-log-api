@@ -6,7 +6,7 @@ const auditLogger = {
     const logEntry = {
       ip,
       endpoint,
-      timestamps: new Date().toISOString(),
+      timestamp: new Date().toISOString(),
       status
     };
 
