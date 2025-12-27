@@ -1,9 +1,3 @@
-/*
-   NOTE: In a production environment with multiple server instances,
-   this Map (rateLimits) would be replaced by a distributed store like Redis
-   to ensure rate limits are shared across all servers.
-*/
-
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -39,7 +33,7 @@ class Storage {
             console.error("Failed to write audit log:", err);
          }
       });
-      console.log("New Audit Log:", log);
+      // console.log("New Audit Log:", log);
    }
 }
 
