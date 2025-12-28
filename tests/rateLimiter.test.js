@@ -12,5 +12,12 @@ describe("Test rateLimiter.checkLimit", () => {
     for (let i = 0; i < 10; i++) {
       expect(rateLimiter.checkLimit(testIP)).toBe(true);
     }
-  })
+  });
+
+  it("should block requests over the limit", () => {
+    for (let i = 0; i < 10; i++) {
+      rateLimiter.checkLimit(testIP);
+    }
+    expect(rateLimiter.checkLimit(testIP)).toBe(false);
+  });
 })
