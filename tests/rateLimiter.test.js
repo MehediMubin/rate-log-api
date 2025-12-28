@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals';
 import rateLimiter from '../src/app/services/rateLimiter.js';
 import storage from '../src/app/services/storage.js';
 
@@ -20,4 +21,14 @@ describe("Test rateLimiter.checkLimit", () => {
     }
     expect(rateLimiter.checkLimit(testIP)).toBe(false);
   });
+
+  it("should allow requests again after the window passes", () => {
+    jest.useFakeTimers();
+    for (let i = 0; i < 10; i++) {
+      rateLimiter.checkLimit(testIP);
+    }
+    jest.advanceTimersByTime(61 * 1000);
+    expect(rateLimiter.checkLimit(testIP)).toBe(true);
+    jest.useRealTimers();
+  })
 })
