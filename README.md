@@ -41,20 +41,24 @@ src/
 ## How to Run the Project
 
 1. **Prerequisites**: Ensure Node.js is installed.
-2. **Install Dependencies**:
+2. **Environment Variables**: Copy the example environment file to a new `.env` file:
+   ```bash
+   cp .env.example .env
+   ```
+   Then edit `.env` as needed for your setup.
+3. **Install Dependencies**:
    ```bash
    npm install
    ```
-3. **Start the Server**:
+4. **Start the Server**:
    ```bash
    npm run dev
    ```
    (Or `node src/server.js`)
-4. **Test the Endpoint**:
+5. **Test the Endpoint**:
    You can use `curl` or Postman.
 
    ```bash
-
    curl -X POST http://localhost:3000/api/action
    ```
 
@@ -108,3 +112,21 @@ The `Storage` class is exported as a singleton. This ensures that only one insta
 {"ip":"1.2.3.4","endpoint":"/api/action","timestamp":"2025-12-27T12:00:00.000Z","status":"allowed"}
 {"ip":"5.6.7.8","endpoint":"/api/action","timestamp":"2025-12-27T12:01:00.000Z","status":"blocked"}
 ```
+
+## Testing
+
+Unit tests are included for core backend logic (rate limiting) as a demonstration of best practices. (Audit logging is not covered by automated tests.)
+
+To run the tests, simply use:
+
+```bash
+npm test
+```
+
+or, if using pnpm:
+
+```bash
+pnpm test
+```
+
+Tests are located in the `tests/` directory.
