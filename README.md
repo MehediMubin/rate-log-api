@@ -7,7 +7,7 @@ This project implements a minimal backend API with IP-based rate limiting and re
 1. **GitHub repository link**
 2. **Working API**
 3. **README.md** including:
-   -  How to run the project
+   -  [How to run the project](#how-to-run-the-project)
    -  [Rate limiting rules](#rate-limiting-rules)
    -  [Storage choice and reasoning](#storage-choice--reasoning)
    -  [Any assumptions or tradeoffs made](#assumptions--tradeoffs)
@@ -17,8 +17,6 @@ This project implements a minimal backend API with IP-based rate limiting and re
 -  **API Endpoint**: `POST /api/action`
 -  **Rate Limiting**: Limits requests to 10 per minute per IP. Returns `429 Too Many Requests` when exceeded.
 -  **Audit Logging**: Logs every request (IP, endpoint, timestamp, status) to a persistent file (`audit.log`) in NDJSON format.
-
-src/
 
 ## Project Structure
 
