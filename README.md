@@ -91,6 +91,7 @@ The `Storage` class is exported as a singleton. This ensures that only one insta
 -  `req.ip` is sufficient for identifying clients (trust proxy settings may need adjustment in a real deployment behind a load balancer).
 -  **Persistence**: Rate limit data is lost when the server restarts. In a production environment, this would be replaced by a distributed store like Redis to handle persistence and scaling across multiple server instances.
 -  **Scalability**: In-memory storage is not suitable for clustered/multi-instance deployments.
+-  **Audit Logging Limitation**: Writing audit logs to a file (logs/audit.log) works in local development, but will fail in most production or serverless environments (like Vercel) due to read-only filesystems. This approach is used here for simplicity and demonstration. In production, use an external logging service, database, or cloud storage for audit logs.
 
 ## Audit Log File Format & Efficiency
 
