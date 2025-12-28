@@ -97,7 +97,7 @@ The `Storage` class is exported as a singleton. This ensures that only one insta
 **Format**: Newline Delimited JSON (NDJSON)
 
 -  Each audit log entry is written as a single line of JSON to the `audit.log` file (one object per line).
--  This approach is highly efficient: appending a line to a file is a constant-time operation, regardless of file size.
+-  This approach is highly efficient: appending a line to a file is a constant-time `O(1)` operation, regardless of file size.
 -  Unlike storing all logs in a single JSON array (which would require reading and rewriting the entire file for every new log), NDJSON allows the server to write logs quickly and reliably, even as the file grows large.
 -  This method saves both time and system resources, and is robust against crashes (only the last line might be lost if interrupted).
 
